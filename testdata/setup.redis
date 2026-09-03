@@ -1,0 +1,16 @@
+FLUSHDB
+SET quest "the chicken coop catastrophe"
+SET description "Players must rescue a group of chickens that have been taken hostage by a group of evil goblins."
+HSET "player:1" name Sykios score 0 team Dorkfoot challenges_completed 0
+HSET "player:2" name Nidios score 0 team Dorkfoot challenges_completed 0
+HSET "player:3" name Tiaitia score 0 team Dorkfoot challenges_completed 0
+HSET "player:4" name Belaeos score 0 team Knucklewimp challenges_completed 0
+HSET "player:5" name Polytia score 0 team Knucklewimp challenges_completed 0
+HSET "player:6" name Moritia score 0 team Knucklewimp challenges_completed 0
+HSET "player:7" name Daryos score 0 team Snarkdumbthimble challenges_completed 0
+HSET "player:8" name Blalios score 0 team Snarkdumbthimble challenges_completed 0
+HSET "player:9" name Ighteatia score 0 team Snarkdumbthimble challenges_completed 0
+SADD "team:Dorkfoot" Sykios Nidios Tiaitia
+SADD "team:Knucklewimp" Belaeos Polytia Moritia
+SADD "team:Snarkdumbthimble" Daryos Blalios Ighteatia
+ZADD "challenges" 1 "Enter the hidden dungeon" 2 "Find the chicken coop" 3 "Defeat the goblins" 4 "Rescue the chickens" 5 "Escape the dungeon"
