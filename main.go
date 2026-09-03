@@ -41,4 +41,12 @@ func main() {
 	if err != nil {
 		fmt.Printf("Pipeline failed: %v\n", err)
 	}
+
+	fmt.Println()
+	fmt.Println()
+
+	err = redis.Transaction(client)
+	if err != nil {
+		fmt.Printf("Transaction failed: %v\n", err)
+	}
 }
