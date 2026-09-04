@@ -49,4 +49,9 @@ func main() {
 	if err != nil {
 		fmt.Printf("Transaction failed: %v\n", err)
 	}
+
+	fmt.Println()
+	fmt.Println()
+
+	err = redis.PubSub(client)
 }
